@@ -16,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/labs13-connect-kids/backend-mock/issues"
   },
-  "homepage": "https://github.com/labs13-connect-kids/backend-mock#readme"
+  "homepage": "https://github.com/labs13-connect-kids/backend-mock#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.18.0",
+    "knex": "^0.17.6",
+    "morgan": "^1.9.1",
+    "sqlite3": "^4.0.9"
+  }
 }
