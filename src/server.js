@@ -19,14 +19,14 @@ server.get( '/' , ( req , res ) => {
     res.status(200).json({ message: 'Sup ✌🏼 -Server' })
 });
 
+//POST METHOD ⬇︎
 server.post( '/api/sendEvent' , ( req , res ) => {
     let { emailAddress , event } = req.body;
     if ( !emailAddress || !event ) {
         res.status( 400 ).json( 'Body must contain emailAddress and event' )
     }
-    event = event.split( '-' )
-    const success = event[ event.length - 1 ] == 'success' ? 1 : 0;
-    res.status( 200 ).json({ emailAddress , success });
+    const success = event.includes( 'success' ) ? 1 : 0;
+    res.status( 502 ).json({ emailAddress , success });
 });
 
 //MIDDLEWARE ERROR CHECK ⬇︎
