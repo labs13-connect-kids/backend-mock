@@ -41,7 +41,7 @@ server.post('/api/family_connections_interest', (req, res) => {
     .catch(err => res.status(500).json({ error: err }));
 });
 
-//GET METHOD ⬇︎ to retrieve all emails
+//GET METHOD ⬇︎ to retrieve all emails of interested users
 server.get('/api/family_connections_interest', (req, res) => {
   db('famConInterest')
     .then(emails => res.status(200).json(emails))
